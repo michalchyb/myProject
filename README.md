@@ -7,6 +7,7 @@ Web application for people who run and who'd like to store results of runs etc. 
 - IntelliJ IDEA
 - Spring Boot
 - Spring Security
+- MySQL
 - Hibernate
 - Bootstrap
 
