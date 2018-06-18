@@ -2,6 +2,7 @@ package pl.coderslab.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
@@ -28,18 +29,18 @@ public class HomeController {
 //        return "about";
 //    }
 
-    @GetMapping("/404")
-    public String error404() {
-        return "404";
-    }
-    @GetMapping("/405")
-    public String error405() {
-        return "405";
-    }
-    @GetMapping("/500")
-    public String error500() {
-        return "500";
-    }
+//    @GetMapping("/404")
+//    public String error404() {
+//        return "errors/404";
+//    }
+//    @GetMapping("/405")
+//    public String error405() {
+//        return "errors/405";
+//    }
+//    @GetMapping("/500")
+//    public String error500() {
+//        return "errors/500";
+//    }
     @GetMapping("/contact")
     public String contact() {
         return "contact";
@@ -47,5 +48,13 @@ public class HomeController {
     @GetMapping("/login")
     public String login() {
         return "login";
+    }
+    @Controller
+    public class MyController {
+
+        @RequestMapping("/")
+        public void handleRequest() {
+            throw new RuntimeException("test exception");
+        }
     }
 }
