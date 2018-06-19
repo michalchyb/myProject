@@ -19,12 +19,12 @@ public class User {
     @NotNull
     @NotBlank
     @Size(min = 3)
-    @Pattern(regexp="[a-zA-Z]*")
+    @Pattern(regexp = "[a-zA-Z]*")
     private String name;
     @NotNull
     @NotBlank
     @Size(min = 2)
-    @Pattern(regexp="[a-zA-Z]*")
+    @Pattern(regexp = "[a-zA-Z]*")
     private String lastName;
 
     @Email

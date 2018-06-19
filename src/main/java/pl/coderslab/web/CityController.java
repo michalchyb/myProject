@@ -58,8 +58,6 @@ public class CityController {
 
     @GetMapping("/update/{id}")
     public String updateCity(Model model, @PathVariable long id) {
-//        City city = cityRepository.findOne(id);
-//        model.addAttribute("city", city);
         model.addAttribute("city", cityRepository.findOne(id));
         return "cityUpdate";
     }

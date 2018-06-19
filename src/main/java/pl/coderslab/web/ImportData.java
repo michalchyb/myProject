@@ -39,27 +39,10 @@ public class ImportData {
             Elements runs = doc.select("span[itemprop = summary]");
             Elements location = doc.select("span[itemprop = location]");
             Elements data = doc.select("td[itemprop = startdate]");
-//            for (Element d : data) {
-//                //System.out.println(d);
-//                String substring = d.toString().substring(35);
-//                String substringResult = substring.toString().substring(0, 10);
-//                //System.out.println(substringResult);
-//            }
-//            for (Element run : runs) {
-//                String replace1 = run.toString().replaceAll("<span itemprop=\"summary\">", "");
-//                String resultRun = replace1.toString().replaceAll("</span>", "");
-//                //System.out.println(resultRun);
-//            }
-//            for (Element l : location) {
-//                String replace1 = l.toString().replaceAll("<span itemprop=\"location\">", "");
-//                String result = replace1.toString().replaceAll(" <br> <small></small> <small class=\"extraSmall\">pomorskie</small> </span>", "");
-//                // System.out.println(result);
-//            }
-
 
             for (int i = 0; i < runs.size(); i++) {
-            // debug test for 2 iterations only
-            //for (int i = 0; i < 3; i++) {
+                // debug test for 2 iterations only
+                //for (int i = 0; i < 3; i++) {
                 String replace1 = runs.get(i).toString().replaceAll("<span itemprop=\"summary\">", "");
                 String resultRun = replace1.toString().replaceAll("</span>", "");
 
@@ -91,12 +74,13 @@ public class ImportData {
         }
         return "importDatafromWebsite";
     }
+
     @GetMapping("/runsInGivenCity/{id}")
     public String runsInGivenCity(Model model, @PathVariable long id) {
         //List<Run> runs = runRepository.findByCityId(id);
         List<RunImport> runs = runImportRepository.findByCityId(id);
         System.out.println(runs.size());
-        model.addAttribute("runsInCty",runs);
+        model.addAttribute("runsInCty", runs);
         return "runListWhereGivenCity";
     }
 }

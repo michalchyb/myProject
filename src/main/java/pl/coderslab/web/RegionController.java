@@ -36,6 +36,7 @@ public class RegionController {
         }
 
     }
+
     @GetMapping("/all")
     public String list(Model model) {
         return "regionsList";
