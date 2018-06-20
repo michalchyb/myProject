@@ -2,16 +2,12 @@ package pl.coderslab.web;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.entity.City;
-import pl.coderslab.entity.Region;
-import pl.coderslab.entity.Run;
 import pl.coderslab.entity.RunImport;
 import pl.coderslab.repository.CityRepository;
 import pl.coderslab.repository.RunImportRepository;

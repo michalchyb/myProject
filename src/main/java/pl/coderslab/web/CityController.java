@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.entity.City;
-import pl.coderslab.entity.Run;
 import pl.coderslab.repository.CityRepository;
 
 import javax.validation.Valid;

@@ -7,7 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.entity.City;
 import pl.coderslab.entity.Run;
-import pl.coderslab.entity.Run;
 import pl.coderslab.entity.User;
 import pl.coderslab.repository.*;
 import pl.coderslab.repository.RunRepository;
